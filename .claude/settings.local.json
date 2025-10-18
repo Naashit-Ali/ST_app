@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd /c gradlew.bat app:installDebug -PreactNativeDevServerPort=8081)",
+      "Bash(\"C:\\Users\\dt\\Desktop\\ReactNative\\SlugTag\\android\\gradlew.bat\" app:installDebug -PreactNativeDevServerPort=8081)",
+      "Bash(\"..\\android\\gradlew.bat\" app:installDebug -PreactNativeDevServerPort=8081)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
