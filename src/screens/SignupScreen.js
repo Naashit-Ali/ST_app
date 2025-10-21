@@ -12,16 +12,18 @@ import NavigationService from '../navigation/NavigationService';
 import CustomImage from '../components/atoms/CustomImage';
 import Images from '../assets/images';
 import HaveAccount from '../components/molecules/HaveAccount';
+import CustomPhoneInput from '../components/organisms/CustomPhoneInput';
 
 const SignUpScreen = () => {
   return (
-    <ScreenBoiler headerType={2} headerTitle="Back">
+    <ScreenBoiler showHeader={false}>
       <View style={styles.container}> 
         <CustomText style={styles.heading}>
           Get Started With {`\n`} Slug Tag
         </CustomText>
         <CustomTextInput placeholder="Full Name" />
         <CustomTextInput placeholder="Email" />
+        <CustomPhoneInput/>
 
         <View style={styles.termsContainer}>
           <CustomImage

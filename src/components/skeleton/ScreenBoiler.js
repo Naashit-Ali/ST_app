@@ -10,6 +10,7 @@ import CustomStatusBar from '../atoms/CustomStatusBar';
 import {colors} from '../../theme/colors';
 // import MainHeader from '../organisms/MainHeader';
 import {moderateScale} from 'react-native-size-matters';
+import Header from '../organisms/Header';
 
 const ScreenBoiler = ({
   children,
@@ -81,16 +82,10 @@ const ScreenBoiler = ({
           source: backgroundImage,
           resizeMode: 'cover',
         })}>
-        {/* {showHeader && (
-          <MainHeader
-            type={headerType}
-            isSetting={isSetting}
-            isMenu={isMenu}
-            title={headerTitle}
-            isBack={isBack}
-            headerOneStyle={headerOneStyle}
-          />
-        )} */}
+        {
+          showHeader && 
+          <Header/>}
+
         {content}
       </Wrapper>
     </KeyboardAvoidingView>

@@ -14,6 +14,7 @@ import {
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
 import NavigationService from '../navigation/NavigationService'
+import Header from '../components/organisms/Header'
 
 const OtpScreen = () => {
 
@@ -31,7 +32,6 @@ const OtpScreen = () => {
   });
     return (
         <ScreenBoiler>
-
             <CustomText style={styles.heading}>
                 Enter 6-digit code
             </CustomText>
@@ -95,16 +95,19 @@ const styles = StyleSheet.create({
     btn: {
         marginTop: moderateScale(16, 0.3),
     },
-    root: {flex: 1,
-        // backgroundColor:'red'
+    codeFieldRoot:{
+      // backgroundColor:'red'
     },
   cell: {
     width: moderateScale(40, 0.3),
     height: moderateScale(50, 0.3),
-    fontSize: moderateScale(34, 0.3),
+    fontSize: moderateScale(20, 0.3),
     backgroundColor: colors?.white,
     textAlign: 'center',
     color: colors?.gray,
+    fontFamily: fonts?.regular,
+    borderRadius: moderateScale(4, 0.3),
+    textAlignVertical: 'center',
   },
   focusCell: {
     // borderColor: colors?.primary,
