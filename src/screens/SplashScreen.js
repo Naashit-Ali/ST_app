@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
   footerText: {
     fontFamily : fonts?.bold,
     fontSize : moderateScale(18,0.3),
-    color : colors?.themeBlackV2, // Color Check
+    color : colors?.black, 
+    opacity: 0.7,
   },
 })
 

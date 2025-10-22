@@ -17,7 +17,9 @@ const LoginScreen = () => {
           Welcome Back
         </CustomText>
         <CustomTextInput placeholder="Email Address/Phone Number" />
-        <CustomTextInput placeholder="Password" />
+        <CustomTextInput
+        secureText
+        placeholder="Password" />
         <CustomButton
           title={'Sign In'}
           onPress={() => {

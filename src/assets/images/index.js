@@ -4,6 +4,7 @@ const Images = {
   facebook: require('./facebook.png'),
   insta: require('./insta.png'),
   map: require('./map.png'),
+  porfileImage : require('./profileImage.png'),
 };
 
 export default Images;

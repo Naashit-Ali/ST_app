@@ -16,8 +16,12 @@ const PasswordScreen = () => {
     Set a password
         </CustomText>
         <CustomText style={styles?.subTitle}>Set a strong password for your account</CustomText>
-        <CustomTextInput placeholder="Password" />
-        <CustomTextInput placeholder="Confirm Password" />
+        <CustomTextInput
+        secureText
+        placeholder="Password" />
+        <CustomTextInput 
+secureText
+        placeholder="Confirm Password" />
         <CustomButton
           title={'Confirm'}
           onPress={() => {

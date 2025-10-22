@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
       // backgroundColor:'red'
     },
   cell: {
-    width: moderateScale(40, 0.3),
+    width: moderateScale(47, 0.3),
     height: moderateScale(50, 0.3),
     fontSize: moderateScale(20, 0.3),
     backgroundColor: colors?.white,

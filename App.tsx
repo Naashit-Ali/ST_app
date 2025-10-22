@@ -1,7 +1,7 @@
 import React from 'react';
-import {LogBox, SafeAreaView} from 'react-native';
-import {Provider} from 'react-redux';
-import store, {persistor} from './src/store';
+import { LogBox, SafeAreaView } from 'react-native';
+import { Provider } from 'react-redux';
+import store, { persistor } from './src/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import AppNavigator from './src/navigation/AppNavigation';
 
@@ -9,10 +9,8 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-
           <MainContainer />
           <SafeAreaView />
-
       </PersistGate>
     </Provider>
   );

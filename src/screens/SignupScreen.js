@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {StyleSheet, View} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../components/atoms/CustomButton';
@@ -13,8 +13,12 @@ import CustomImage from '../components/atoms/CustomImage';
 import Images from '../assets/images';
 import HaveAccount from '../components/molecules/HaveAccount';
 import CustomPhoneInput from '../components/organisms/CustomPhoneInput';
+import { AntDesign } from '@react-native-vector-icons/ant-design';
+import Icon from '../components/atoms/Icon';
+
 
 const SignUpScreen = () => {
+  const [isChecked, setIsChecked] = useState(false);
   return (
     <ScreenBoiler showHeader={false}>
       <View style={styles.container}> 
@@ -26,11 +30,14 @@ const SignUpScreen = () => {
         <CustomPhoneInput/>
 
         <View style={styles.termsContainer}>
-          <CustomImage
-            source={Images?.logo}  // image of check mark
-            style={styles.checkImage} 
-            resizeMode="contain"
-          />
+       
+      <Icon family="MaterialDesignIcons"
+      onPress={() => {
+        setIsChecked(!isChecked);
+      }}
+      name={isChecked ? 'check-circle-outline' : 'checkbox-blank-circle-outline'}
+      
+      size={moderateScale(25, 0.3)} color={colors?.primary} />
           <CustomText style={styles.termText}>
             By signing up, you agree to the Terms of service and Privacy Policy
           </CustomText>
@@ -77,10 +84,7 @@ const styles = StyleSheet.create({
     gap: moderateScale(10, 0.3),
     marginVertical: moderateScale(10, 0.3),
   },
-  checkImage: {
-    width: moderateScale(25, 0.3),
-    height: moderateScale(25, 0.3),
-  },
+
   termText: {
     flex: 1,
     fontSize: moderateScale(14, 0.3),

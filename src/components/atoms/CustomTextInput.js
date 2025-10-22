@@ -14,6 +14,7 @@ import CustomText from './CustomText';
 // import AntDesign from '@react-native-vector-icons/ant-design';
 import { fonts } from '../../theme/font';
 import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
+import Icon from './Icon';
 
 const CustomTextInput = ({
   containerStyle = {},
@@ -85,17 +86,17 @@ const CustomTextInput = ({
         />
         {secureText && (
           <TouchableOpacity style={[styles?.eyeIconContainer]}>
-            {/* <Icon
+            <Icon
               name={showPassword ? 'eye' : 'eye-invisible'}
-              as={AntDesign}
+              family={'AntDesign'}
               style={{
-                color: iconColor ? iconColor : colors?.black,
+                color: iconColor ? iconColor : colors?.gray,
               }}
-              size={moderateScale(20,0.6)}
+              size={moderateScale(16,0.6)}
               onPress={() => {
                 setShowPassword(!showPassword);
               }}
-            /> */}
+            />
           </TouchableOpacity>
         )}
       </View>

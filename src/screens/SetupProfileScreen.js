@@ -11,6 +11,7 @@ import NavigationService from '../navigation/NavigationService';
 import CustomImage from '../components/atoms/CustomImage';
 import Images from '../assets/images';
 import CustomDropdown from '../components/organisms/CustomDropdown';
+import Icon from '../components/atoms/Icon';
 
 const SetupProfileScreen = () => {
     return (
@@ -23,17 +24,19 @@ const SetupProfileScreen = () => {
             <View style={styles?.imageContainer}>
 
                 <CustomImage
-                    source={Images?.logo}
+                    source={Images?.porfileImage}
                     style={styles?.img}
                     resizeMode='cover'
                 />
-                <View style={styles?.editContainer}>
-                    <CustomImage
-                        source={Images?.google}
-                        style={styles?.edit}
-                        resizeMode='contain'
-                    />
-                </View>
+
+
+                <Icon
+                    name={'camera-outline'}
+                    family='MaterialDesignIcons'
+                    containerStyle={styles?.editContainer}
+                    color={colors?.white}
+                    size={moderateScale(20, 0.3)}
+                />
 
             </View>
             <CustomTextInput placeholder="Full Name" />
@@ -46,7 +49,7 @@ const SetupProfileScreen = () => {
 
             }}>
                 <CustomDropdown
-                    style={{ width: '45%' }}
+                    style={{ width: '40%' }}
                     placeholder={'State'}
                 />
 
@@ -54,8 +57,7 @@ const SetupProfileScreen = () => {
                     placeholder='Zip Code'
                     // inputContainerStyle={{ width: '78%' }}
                     inputStyle={{
-                        width: '45%'
-
+                        width: '50%'
                     }}
                 />
 

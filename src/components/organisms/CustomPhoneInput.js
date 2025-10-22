@@ -22,11 +22,15 @@ const CustomPhoneInput = () => {
                 textInputStyle={styles?.inputStyle}
                 countryPickerButtonStyle={styles?.pickerStyle}
                 layout="first"
+                
                 defaultCode="PK" // 👈 Set a default country code
                 flagButtonStyle={styles?.flagButtonStyle}
                 countryPickerProps={{
                     withFlag: true, // 👈 Ensures flag is shown
+                    
+                    
                 }}
+                
                 onChangeText={(text) => {
                     setValue(text);
                 }}
@@ -35,7 +39,7 @@ const CustomPhoneInput = () => {
                 }}
                 withDarkTheme
                 withShadow
-                autoFocus
+                // autoFocus
             />
 
         </View>
