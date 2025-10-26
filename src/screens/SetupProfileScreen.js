@@ -15,7 +15,7 @@ import Icon from '../components/atoms/Icon';
 
 const SetupProfileScreen = () => {
     return (
-        <ScreenBoiler>
+        <ScreenBoiler type={1}>
             <CustomText style={styles.heading}>
                 Profile Setup
             </CustomText>

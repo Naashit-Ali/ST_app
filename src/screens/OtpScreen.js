@@ -31,7 +31,7 @@ const OtpScreen = () => {
     setValue,
   });
     return (
-        <ScreenBoiler>
+        <ScreenBoiler type={1}>
             <CustomText style={styles.heading}>
                 Enter 6-digit code
             </CustomText>

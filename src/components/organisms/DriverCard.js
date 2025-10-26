@@ -115,7 +115,8 @@ title={'View Profile'}
 style={{
     width : '48%',
     borderRadius : moderateScale(4, 0.3)
-    , paddingHorizontal : moderateScale(0,0.3)
+    , paddingHorizontal : moderateScale(0,0.3),
+    paddingVertical : moderateScale(10,0.3),
 
 }}
 variant='transparent'
@@ -127,7 +128,8 @@ title={'Message'}
 style={{
     width : '48%',
     borderRadius : moderateScale(4, 0.3)
-, paddingHorizontal : moderateScale(0,0.3)
+, paddingHorizontal : moderateScale(0,0.3),
+    paddingVertical : moderateScale(12,0.3),
 }}
 />
 </View>

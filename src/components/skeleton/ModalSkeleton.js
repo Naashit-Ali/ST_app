@@ -10,8 +10,7 @@ import {moderateScale} from 'react-native-size-matters';
 import {colors} from '../../theme/colors';
 import CustomText from '../atoms/CustomText';
 import {fonts} from '../../theme/font';
-import {Icon} from 'native-base';
-import AntDesign from '@react-native-vector-icons/ant-design';
+import Icon from '../atoms/Icon';
 
 const ModalSkeleton = ({visible, onClose, children, containerStyle}) => {
   const {width, height} = useWindowDimensions();
@@ -33,12 +32,11 @@ const ModalSkeleton = ({visible, onClose, children, containerStyle}) => {
               },
             ]}>
             <View style={styles?.headerSection}>
-              <CustomText style={styles?.text}>Rate this chat</CustomText>
+              <CustomText style={styles?.text}>Request Sent</CustomText>
               <Icon
-                as={AntDesign}
-                name={'close'}
+family='AntDesign'                name={'close'}
                 size={moderateScale(20, 0.3)}
-                color={colors?.white}
+                color={colors?.danger}
                 onPress={onClose}
               />
             </View>
@@ -66,7 +64,7 @@ const customStyleSheet = (width, height) => {
       justifyContent: 'center',
     },
     modalContainer: {
-      backgroundColor: colors?.primary,
+      backgroundColor: colors?.white,
       width: '90%',
       padding: moderateScale(16, 0.3),
       borderRadius: moderateScale(16, 0.3),
@@ -77,13 +75,18 @@ const customStyleSheet = (width, height) => {
     text: {
       fontSize: moderateScale(16, 0.3),
       fontFamily: fonts?.medium,
-      color: colors?.white,
+      color: colors?.black,
     },
     headerSection: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       width: '100%',
       alignItems: 'center',
+      borderBottomWidth: 0.5,
+      borderBottomColor: colors?.gray,
+      padding
+      : moderateScale(8, 0.3),
+      marginBottom : moderateScale(12,0.3)
     },
   });
 };

@@ -17,6 +17,8 @@ export const colors = {
    instagram:'#B73198',
    blue:'#1976D2',
    yellow : '#FFEB3B',
+
+   orange : '#FF9800',
    success:'#4CAF50',
   };
   

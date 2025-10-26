@@ -21,7 +21,6 @@ const ScreenBoiler = ({
   behavior = Platform.OS === 'ios' ? 'padding' : undefined,
   containerStyle,
   headerType,
-  headerTitle = '',
   isBack = false,
   isSetting = false,
   isMenu = false,
@@ -30,6 +29,8 @@ const ScreenBoiler = ({
   showHeader = true,
   hidden = false,
   barStyle = 'dark-content',
+  type = 2,
+  headerTitle = '',
 }) => {
   const Wrapper = backgroundImage ? ImageBackground : View;
 
@@ -84,7 +85,10 @@ const ScreenBoiler = ({
         })}>
         {
           showHeader && 
-          <Header/>}
+          <Header
+          headerTitle={headerTitle}
+          type={type}
+          />}
 
         {content}
       </Wrapper>

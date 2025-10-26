@@ -39,6 +39,7 @@ const CustomTextInput = ({
   errorTxt,
   showSearchIcon = false,
   leftImage,
+  tintColor,
   ...rest
 }) => {
   const {width,height} = useWindowDimensions();
@@ -79,6 +80,7 @@ const CustomTextInput = ({
           leftImage && 
           <CustomImage
           source={leftImage}
+          tintColor={tintColor}
           style={[{width:moderateScale(20,0.6),height:moderateScale(20,0.6),marginRight:moderateScale(10,0.3)},iconStyle]}
           resizeMode='contain'
           />

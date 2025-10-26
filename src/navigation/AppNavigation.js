@@ -12,6 +12,8 @@ import SetupProfileScreen from '../screens/SetupProfileScreen';
 import BottomNavigation from './BottomNavigation';
 import AvailableRidesScreen from '../screens/AvailableRidesScreen';
 import ViewMapScreen from '../screens/ViewMapScreen';
+import DriverProfileScreen from '../screens/DriverProfileScreen';
+import SearchScreen from '../screens/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,13 +29,15 @@ const AppNavigation = () => {
     SetupProfileScreen,
     BottomNavigation,
     AvailableRidesScreen,
-    ViewMapScreen
+    ViewMapScreen,
+    DriverProfileScreen,
+    SearchScreen,
     
   }
   return (
     <NavigationContainer ref={NavigationService.navigationRef}>
       <Stack.Navigator
-        initialRouteName="ViewMapScreen"
+        initialRouteName="SplashScreen"
         screenOptions={{
           headerShown: false,
         }}>

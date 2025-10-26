@@ -8,10 +8,11 @@ import { moderateScale } from 'react-native-size-matters'
 import CustomTextInput from '../components/atoms/CustomTextInput'
 import CustomButton from '../components/atoms/CustomButton'
 import HaveAccount from '../components/molecules/HaveAccount'
+import NavigationService from '../navigation/NavigationService'
 
 const LoginScreen = () => {
   return (
-    <ScreenBoiler>
+    <ScreenBoiler type={1}>
       <View style={styles?.container}>
         <CustomText style={styles.heading}>
           Welcome Back
@@ -23,7 +24,7 @@ const LoginScreen = () => {
         <CustomButton
           title={'Sign In'}
           onPress={() => {
-            // NavigationService?.navigate('');
+            NavigationService?.navigate('BottomNavigation');
           }}
         />
       </View>

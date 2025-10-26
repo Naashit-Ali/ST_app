@@ -11,7 +11,7 @@ import NavigationService from '../navigation/NavigationService'
 
 const PasswordScreen = () => {
   return (
-    <ScreenBoiler>
+    <ScreenBoiler type={1}>
   <CustomText style={styles.heading}>
     Set a password
         </CustomText>

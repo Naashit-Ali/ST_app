@@ -12,6 +12,7 @@ import { fonts } from '../theme/font'
 import CustomButton from '../components/atoms/CustomButton'
 import CustomImage from '../components/atoms/CustomImage'
 import RoutesCard from '../components/organisms/RoutesCard'
+import NavigationService from '../navigation/NavigationService'
 
 const HomeScreen = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -48,7 +49,7 @@ const HomeScreen = () => {
         showSearchIcon={true}
         inputContainerStyle={{
           marginTop: moderateScale(20, 0.3)
-        }}
+        }}  
       />
       <Tab tabs={tabData} />
 
@@ -164,13 +165,20 @@ const HomeScreen = () => {
         </View>
         <CustomButton
           title={`Let's Go`}
+          onPress={() => {
+            NavigationService?.navigate('SearchScreen')
+          }}
           style={{
             marginTop: moderateScale(20, 0.3)
           }}
         />
       </View>
 
-      <View style={{
+      <TouchableOpacity
+      onPress={() => {
+        NavigationService?.navigate('AvailableRidesScreen')
+      }}
+      style={{
         backgroundColor: colors?.white,
         padding: moderateScale(12, 0.3),
         borderRadius: moderateScale(8, 0.3),
@@ -199,7 +207,7 @@ const HomeScreen = () => {
             marginTop: moderateScale(10, 0.3)
           }}
         />
-      </View>
+      </TouchableOpacity>
 
       <View style={{
         backgroundColor: colors?.white,

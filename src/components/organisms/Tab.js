@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     width: moderateScale(20, 0.6),
-    height: moderateScale(2, 0.6),
+    height: moderateScale(20, 0.6),
     marginRight: moderateScale(8, 0.3),
   },
   tabText: {

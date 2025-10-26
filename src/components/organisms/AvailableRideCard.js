@@ -8,6 +8,7 @@ import CustomText from '../atoms/CustomText'
 import { fonts } from '../../theme/font'
 import Icon from '../atoms/Icon'
 import CustomButton from '../atoms/CustomButton'
+import NavigationService from '../../navigation/NavigationService'
 
 const AvailableRideCard = () => {
   return (
@@ -279,9 +280,13 @@ style={{
 
 <CustomButton
 title={'Profile'}
+onPress={() => {
+    NavigationService?.navigate('DriverProfileScreen')
+}}
 style={{
     width : '48%',
     borderRadius : moderateScale(4, 0.3)
+    , paddingVertical : moderateScale(10,0.3),
 }}
 variant='transparent'
 />
@@ -289,10 +294,14 @@ variant='transparent'
 <CustomButton
 title={'Request Ride'}
 // variant='transparent'
+onPress={() => {
+    NavigationService?.navigate('ViewMapScreen')
+}}
 style={{
     width : '48%',
     borderRadius : moderateScale(4, 0.3)
-, paddingHorizontal : moderateScale(0,0.3)
+, paddingHorizontal : moderateScale(0,0.3),
+paddingVertical : moderateScale(12,0.3),
 }}
 />
 </View>

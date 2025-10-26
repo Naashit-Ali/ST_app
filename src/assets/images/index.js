@@ -24,6 +24,7 @@ const Images = {
   saving : require('./saving.png'),
   duration : require('./duration.png'),
   seat : require('./seat.png'),
+  jeep : require('./jeep.png'),
 };
 
 export default Images;
