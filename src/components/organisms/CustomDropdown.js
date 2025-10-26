@@ -22,7 +22,7 @@ const CustomDropdown = ({
         <View style={[styles?.container, style]}>
             <Dropdown
                 style={[styles?.dropdown, dropdownStyle]}
-                data={data}
+                data={data || []}
                 selectedTextStyle={styles?.textStyle}
                 labelField="label"
                 valueField="value"
@@ -31,7 +31,7 @@ const CustomDropdown = ({
                 placeholder={placeholder ? placeholder : "Select item"}
                 value={value}
                 onChange={item => {
-                    setValue(item);
+                   setValue && setValue(item);
                 }}
             />
 

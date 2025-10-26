@@ -29,7 +29,7 @@ const ScreenBoiler = ({
   headerOneStyle = {},
   showHeader = true,
   hidden = false,
-  barStyle = 'light-content',
+  barStyle = 'dark-content',
 }) => {
   const Wrapper = backgroundImage ? ImageBackground : View;
 
@@ -39,7 +39,7 @@ const ScreenBoiler = ({
         <ScrollView
           contentContainerStyle={[
             {
-              flexGrow: 1,
+              // flexGrow: 1,
               backgroundColor: backgroundImage ? undefined : backgroundColor,
             },
             containerStyle,
@@ -74,7 +74,7 @@ const ScreenBoiler = ({
       />
       <Wrapper
         style={{
-          flex: 1,
+          flexGrow: 1,
           paddingHorizontal: moderateScale(24, 0.3),
           ...mainContainerStyle,
         }}

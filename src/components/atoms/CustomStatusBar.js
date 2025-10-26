@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     zIndex: 1000,
   },
   statusBar: {
-    height: STATUSBAR_HEIGHT,
+    // height: STATUSBAR_HEIGHT,
   },
 });
 

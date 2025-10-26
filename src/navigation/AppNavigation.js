@@ -9,6 +9,9 @@ import LoginScreen from '../screens/LoginScreen';
 import PasswordScreen from '../screens/PasswordScreen';
 import OtpScreen from '../screens/OtpScreen';
 import SetupProfileScreen from '../screens/SetupProfileScreen';
+import BottomNavigation from './BottomNavigation';
+import AvailableRidesScreen from '../screens/AvailableRidesScreen';
+import ViewMapScreen from '../screens/ViewMapScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,12 +25,15 @@ const AppNavigation = () => {
     PasswordScreen,
     OtpScreen,
     SetupProfileScreen,
+    BottomNavigation,
+    AvailableRidesScreen,
+    ViewMapScreen
     
   }
   return (
     <NavigationContainer ref={NavigationService.navigationRef}>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="ViewMapScreen"
         screenOptions={{
           headerShown: false,
         }}>

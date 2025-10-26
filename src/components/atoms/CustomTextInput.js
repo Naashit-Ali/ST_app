@@ -15,6 +15,7 @@ import CustomText from './CustomText';
 import { fonts } from '../../theme/font';
 import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
 import Icon from './Icon';
+import CustomImage from './CustomImage';
 
 const CustomTextInput = ({
   containerStyle = {},
@@ -36,6 +37,8 @@ const CustomTextInput = ({
   secondary,
   labelStyle,
   errorTxt,
+  showSearchIcon = false,
+  leftImage,
   ...rest
 }) => {
   const {width,height} = useWindowDimensions();
@@ -64,6 +67,22 @@ const CustomTextInput = ({
         </CustomText>
       )}
       <View style={[styles.inputContainer, inputContainerStyle]}>
+        {showSearchIcon && 
+        <Icon
+        name='search'
+        family='MaterialIcons'
+        size={moderateScale(20,0.6)}
+        color={colors?.gray}
+        />
+        }
+        {
+          leftImage && 
+          <CustomImage
+          source={leftImage}
+          style={[{width:moderateScale(20,0.6),height:moderateScale(20,0.6),marginRight:moderateScale(10,0.3)},iconStyle]}
+          resizeMode='contain'
+          />
+        }
         <TextInput
           style={[
             styles?.inputBox,
@@ -115,7 +134,6 @@ const customStyleSheet = (width,height) => {
       marginBottom: moderateScale(12, 0.3),
     },
     inputContainer: {
-    
       width: '100%',
       paddingHorizontal: moderateScale(20, 0.3),
 
@@ -143,11 +161,11 @@ const customStyleSheet = (width,height) => {
     },
     labelStyles: {
       fontSize: moderateScale(16, 0.3),
-      color: colors.black,
+      color: colors.gray,
       ...fonts.regular,
       marginBottom: moderateScale(5, 0.3),
-      paddingHorizontal: moderateScale(25, 0.3),
-      paddingBottom: moderateScale(5, 0.3),
+      // paddingHorizontal: moderateScale(25, 0.3),
+      // paddingBottom: moderateScale(5, 0.3),
       textAlign: 'left',
       width: '100%',
     },
